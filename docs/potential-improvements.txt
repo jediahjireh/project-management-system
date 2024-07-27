@@ -1,0 +1,43 @@
+This text file contains a list of potential improvements for the 'PoisePMS.java' file.
+
+- StringBuilder for more efficient string manipulation:
+  This can enhance performance in string operations.
+
+- Prepared Statements to prevent SQL injection:
+  Improves security by protecting against SQL injection attacks.
+
+- Refactor code into separate files for modularity (to improve maintainability and organisation).
+  Suggested refactoring includes:
+
+  - ArchitectOperations.java: Handles architect-related operations
+
+    - addNewArchitect(Statement statement)
+    - updateArchitect(Statement statement)
+    - viewAllArchitects(Statement statement)
+
+  - ContractorOperations.java: Handles contractor-related operations
+
+    - addNewContractor(Statement statement)
+    - updateContractor(Statement statement)
+    - viewAllContractors(Statement statement)
+
+  - CustomerOperations.java: Handles customer-related operations
+
+    - addNewCustomer(Statement statement)
+    - updateCustomer(Statement statement)
+    - viewAllCustomers(Statement statement)
+
+  - ProjectOperations.java: Handles project-related operations
+
+    - addNewProject(Statement statement, Scanner scanner)
+    - deleteProject(Statement statement)
+    - finaliseProject(Statement statement)
+    - findIncompleteProjects(Statement statement)
+    - findOverdueProjects(Statement statement)
+    - searchProjects(Statement statement)
+    - updateProject(Statement statement, Scanner scanner)
+    - viewAllProjects(Statement statement)
+    - getCount(Statement statement, String table, String column, String id): Helper method for project-related operations
+
+  - PoisePMS.java: Main application to handle user interaction and orchestration
+    - main(String[] args)
